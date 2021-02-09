@@ -1,0 +1,68 @@
+python3 -m venv env
+
+source env/bin/activate
+
+pip install django
+
+pip install djangorestframework
+
+django-admin startproject myproject
+
+cd to myproject -> settings.py -> INSTALLED_APPS and input 'rest_framework',
+
+go into myproject directory and type the following.
+
+python manage.py startapp webapp
+
+go back to settings.py and insert name of the project 'webapp',
+
+then create a model in models.py, use employee as reference.
+
+go to admin.py, add the model, and register the site.
+
+once registered run migrations, python manage.py makemigrations, python manage.py migrate
+
+create a superuser, python manage.py createsuperuser.
+
+check to see server is running, python manage.py runserver.
+
+go to admin page, localhost:8000/admin, verify table, users, groups, everything is there.
+
+in this case add a few employees manually.
+
+next we will create a serilizer class, to convert the sql to json.
+
+we will create a new file in the webapp called serializers.py
+
+see the two imports in the headers!
+
+Note the the employee class and how it is an output.
+
+Next to to views.py and design there are many inputs in the header.
+
+then after the headers, create a class based view see viewss.py
+
+go to urls.py and add the imports, and the urlpatterns, see urls.py in main project.
+
+go thru the files as needed to fix bugs.
+
+you should be able to compile, and see 'employee/' onsite1
+
+all set for get requests to an API, with Django!
+
+cannot hit from the front yet, tried 'ALLOWED_HOSTS', and not the issue.
+
+added CORS Origin Whitelist, but only part of the issue, need to get cors package.
+
+added middleware cors headers, then ran 'pip install django-cors-headers'admin.py
+
+can now see json in the console.log from the front. woo hoo!!!
+
+
+
+
+
+
+
+
+
