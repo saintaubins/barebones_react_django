@@ -8,7 +8,10 @@ from rest_framework import status
 from . models import employee
 from . serializers import employeeSerializer
 
+
 class employeeList(APIView):  # inherits from APIView
+
+    
 
     def get(self, request):
         employee1 = employee.objects.all()
