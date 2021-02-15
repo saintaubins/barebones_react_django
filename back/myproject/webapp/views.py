@@ -9,17 +9,17 @@ from . models import employee
 from . serializers import employeeSerializer
 
 
-class employeeList(APIView):  # inherits from APIView
+# class employeeList(APIView):  # inherits from APIView
 
     
 
-    def get(self, request):
-        employee1 = employee.objects.all()
-        serializer = employeeSerializer(employee1, many=True)
-        return Response(serializer.data)
+#     def get(self, request):
+#         employee1 = employee.objects.all()
+#         serializer = employeeSerializer(employee1, many=True)
+#         return Response(serializer.data)
 
-    def post(self):
-        pass
+#     def post(self):
+#         pass
 
 
 

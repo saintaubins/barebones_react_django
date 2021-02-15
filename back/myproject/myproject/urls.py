@@ -21,5 +21,6 @@ from webapp import views
 urlpatterns = [
     path('', include('webapp.urls')),
     path('admin/', admin.site.urls),
-    path('employee/', views.employeeList.as_view()),
+    #path('employee/', views.employeeList.as_view()),
+    #path('lead/', views.leadList.as_view()),
 ]
